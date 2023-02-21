@@ -31,7 +31,7 @@ In this practical Task I created Two branches Master and Feature1/Practical1. An
  #commit changes
  git commit -m "fiel1 added for practical1"
 ```
-![](./snaps/pull-request.png)
+![PR-Terminal-1](./snaps/PR-Terminal-1.png)
 
 Push both the branches on Remote repository.
 
@@ -44,18 +44,18 @@ git push origin feature1/practical1
 
 ```
 
-![](./snaps/pR2.png)
+![PR-Terminal-2](./snaps/PR-Terminal-2.png)
 
 Pull Request generated in Remote repository 
 
-![](./snaps/pr3.png)
-![](./snaps/pr4.png)
-![](./snaps/pr5.png)
-![](./snaps/pr6.png)
+![PR-Image-1](./snaps/PR-Image-1.png)
+![Pr-Image-2](./snaps/PR-image-2.png)
+![Pr-Image-3](./snaps/PR-image-3.png)
+![Pr-Image-4](./snaps/PR-Image-4.png)
 
 Remote Repository Scenario after Merging Banches
 
-![](./snaps/pr7.png)
+![Pr-Image-5](./snaps/PR-Image-5.png)
 
 ## Task-2 Rebase
 
@@ -87,7 +87,7 @@ git commit -m "changes in feature 2 branch in practical task 2"
 ```
 Now you can see the diverged branches
 
-![](./snaps/25.png)
+![Diverged-branch-Terminal](./snaps/Rebase-Terminal-1.png)
 
 Now Switch to the feature2/practical branch and set it's base to master branch
 
@@ -99,12 +99,12 @@ git switch feature2/practical
 git rebase master
 ```
 
-![](./snaps/26.png)
+![Rebase-Operation](./snaps/rebase-Termain-2.png)
 
 
 There are conflicts so first resolve the conflicts   
 
-![](./snaps/27.png)
+![Rebase-Conflicts](./snaps/rebase-conflicts.png)
 
 After resolving conflicts, continue rebasing
 
@@ -112,7 +112,7 @@ After resolving conflicts, continue rebasing
 git rebase --continue
 ```
 
-![](./snaps/28.png)
+![Successfully-Rebased](./snaps/rebase-done.png)
 
 Successfully rebased. Rebase results in linear work history 
 
@@ -128,17 +128,17 @@ To change Previous commit message, use --amend
 #Change previous commit message by --amend
 git commit --amend -m "new Commit message for practical 3"
 ```
-![](./snaps/31.png)
+![amend-commitName](./snaps/change-previous-commitName.png)
 
 To change earlier Commits' message, Open Interective rebase and choose reword option for which you want to change message
 
-![](./snaps/33.png)
+![Interective-rebase](./snaps/Change-commit-interectiveREBASE.png)
 
-![](./snaps/32.png)
+![Reword Option](./snaps/Change-commit-reword.png)
 
 You can see the changes before and after commit messages
 
-![](./snaps/34.png)
+![Result-Reword](./snaps/chnage-commit-result.png)
 
 
 ## Task-4 Cherry-Pick 
@@ -157,7 +157,7 @@ git add .
 git commit -m "file2 created for practical task 4 in feature3"
 ```
 
-![](./snaps/41.png)
+![Commit-History](./snaps/cherry-pick-commit-history.png)
 
 Switch to Base branch and pick commit which you want to add
 
@@ -169,7 +169,7 @@ git switch master
 git cherry-pick ba04e51 
 ```
 
-![](./snaps/42.png)
+![Cherry-pick-Example](./snaps/cherry-pick-done.png)
 
 
 ## Task-5 Drop Commits
@@ -177,7 +177,7 @@ git cherry-pick ba04e51
 There are two newly created commits 
 change1 and change2 
 
-![](./snaps/51.png)
+![Git-log](./snaps/drop-commit-git-log.png)
 
 here we want to drop change 1 so enter in interective rebase mode by it's parent ID
 
@@ -187,7 +187,7 @@ git rebase -i 2985cc7
 ```
 choose drop option for which you want to delete
 
-![](./snaps/52.png)
+![interective-rebase](./snaps/drop-commit-interective-rebase.png)
 
 There are conflicts as File created in that commit is modified in further commits
 
@@ -199,17 +199,17 @@ and continue with rebase operation
 git rebase --continue
 ```
 
-![](./snaps/54.png)
+![rebase-conflicts](./snaps/drop-commit-rebase-conflicts.png)
 
 
 
-![](./snaps/55.png)
+![continue-rebasing](./snaps/drop-commit-continue-rebasing.png)
 
 
 You can delete last commits by reseting it's HEAD
 
-![](./snaps/56.png)
+![Reset-head-toPrevious](./snaps/drop-commit-previous.png)
 
 Here we are completed with Practical Task 5
 
-![](./snaps/57.png)
+![Whole-scenario](./snaps/Whole-scenario.png)
